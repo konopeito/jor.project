@@ -13,15 +13,19 @@
             
             <nav>
                 <!-- Logo here -->
-                <!-- <img scr="images/logoPH.png" class="logo"> -->
-                <ul>
+                <!-- <img src="images/black-placeholder.jpg" alt=""> -->
+                <img src="images/jordclai-header.png" alt="">
+                <ul id="sidemenu">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Commissions</a></li>
                         <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Social Media </a></li>
+                        <li><a href="#">Contact</a></li>
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
+            
             <div class="header-text">
                 <p>*insert title/role</p>
                 <h1>Hello! I'm <span> Jorclai</span> </h1>
@@ -177,7 +181,23 @@
                     <a href="#"><i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
-            <a href="#" class="btn">My Youtube Channel</a>
+            <div class="work">
+                <img src="images/placeholder.png" alt="">
+                <div class="layer">
+                    <h3>Song name</h3>
+                    <p>description</p>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/placeholder.png" alt="">
+                <div class="layer">
+                    <h3>Song name</h3>
+                    <p>description</p>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <a href="#" class="btn"><i class="fa-brands fa-youtube"></i> My Youtube Channel</a>
         </div>
     </div>
     <!-- contact -->
@@ -186,22 +206,28 @@
             <div class="row">
                 <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
-                    <p>Email</p>
-                    <p>Phone #</p>
+                    <p><i class="fa-solid fa-envelope" style="color: #ff00a2;"></i>Email</p>
+                    <p><i class="fa-solid fa-square-phone" style="color: #ff00dd;"></i>Phone #</p>
                     <div class="social-icons">
                         <a href=""><i class="fa-brands fa-discord fa-beat-fade"></i></a>
                         <a href=""><i class="fa-brands fa-spotify fa-beat-fade"></i></a>
                         <a href=""><i class="fa-brands fa-x-twitter fa-beat-fade"></i></a>
-                        <a href=""><i class="fa-brands fa-linkedin fa-beat-fade"></i></a>
-
-                        
-                        
+                        <a href=""><i class="fa-brands fa-tiktok fa-beat-fade"></i></a>
                     </div>
+                    <a href="images/" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact-right">
-                    
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
                 </div>
             </div>
+        </div>
+        <div class="copyright">
+            <p><i class="fa-solid fa-music"></i> Copyright © Jorclai.</p>
         </div>
     </div>
 
@@ -218,7 +244,18 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
-    
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        
+        function openmenu(){
+            sidemenu.style.right = "0";
+
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+
+        }
     </script>
 </body>
 </html>
